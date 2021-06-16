@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="@color/grey_95"
+    tools:context=".ui.activities.SplashScreenActivity">
+
+
+    <LinearLayout
+        android:id="@+id/loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/splash_loading_animation"
+            android:layout_width="200dp"
+            app:lottie_speed="4"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/splash"
+            />
+
+        <TextView
+            android:id="@+id/tv_empty_cart_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:text="Traffic Sign Classification"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_1000"
+    tools:context=".ui.fragments.ClassDiagramFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_1000"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System Design"
+            android:layout_margin="@dimen/spacing_large"
+            android:textColor="@color/grey_20"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We have generated tflite model using tensorflow. The model takes Image as input and classifies and tries to detect provided classes as given in following diagram."
+            android:layout_margin="@dimen/spacing_large"
+            android:textColor="@color/grey_20" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:padding="@dimen/spacing_xmedium"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:src="@drawable/system_design"
+            android:background="@color/grey_80"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The TFlite Model Gets input as normalized image tensor  a float32 tensor of shape\n
+    [1, height, width, 3] containing the normalized input image. Note that the
+    height and width must be compatible with the height and width configured in
+    the fixed_shape_image resizer options in the pipeline config proto.
+    \n\nIn floating point Mobilenet model, 'normalized_image_tensor' has values
+    between [-1,1). This typically means mapping each pixel (linearly) to a value between [-1, 1]. Input image
+    \n\nvalues between 0 and 255 are scaled by (1/128.0) and then a value of
+    -1 is added to them to ensure the range is [-1,1).
+    \n\nIn quantized Mobilenet model, 'normalized_image_tensor' has values between [0,
+    255].
+    In general, see the `preprocess` function defined in the feature extractor class
+    in the object_detection/models directory."
+            android:layout_margin="@dimen/spacing_large"
+            android:textColor="@color/grey_20" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

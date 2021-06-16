@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_95"
+    tools:context=".ui.activities.DetailedRequirementsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="install the TensorFlow Object Detection API either with Python Package Installer (pip) or Docker. For local runs we recommend using Docker and for Google Cloud runs we recommend using pip."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/git_clone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Python Package Installation"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/python_package"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Creating proto files"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/proto_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Test installation Run"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/test_installation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="If everything installed correctly you should see something like:"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/success_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Labelling Data"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Now that we have our images we need to move about 80 percent of the images into the object_detection/images/train directory and the other 20 percent in the object_detection/images/test directory.\n\nIn order to label our data, we used image labeling software LabelImg."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Generating TFRecords for training"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="With the images labeled, we need to create TFRecords that can be served as input data for training of the object detector. In order to create the TFRecords we will use two scripts from Dat Tran’s raccoon detector. Namely the xml_to_csv.py and generate_tfrecord.py files.\n\nAfter downloading both scripts we can first of change the main method in the   xml_to_csv file so we can transform the created xml files to csv correctly."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/xml_to_csv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Now we can transform our xml files to csvs by opening the command line and typing:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/xml_to_csv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="These creates two files in the images directory. One called test_labels.csv and another one called train_labels.csv."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Before we can transform the newly created files to TFRecords we need to write a few lines in the generate_tfrecords.py file."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/pbtxt_py"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="If you are using a different dataset you need to replace the class-names with your own.\n\nNow the TFRecords can be generated by typing:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/generating_tfrecords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="These two commands generate a train.record and a test.record file which can be used to train our object detector."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Creating Labelmap"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="The label map maps an id to a name. We will put it in a folder called training, which is located in the object_detection directory. The example labelmap for my detector can be seen below."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_20"
+            android:visibility="visible" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/creating_labelmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Training configuration"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/setting_up_configurations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Training model"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/training_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:text="Export Frozen Graph"
+            android:textSize="24sp"
+            android:textColor="@color/grey_20"
+            android:textStyle="bold" />
+
+        <io.github.kbiakov.codeview.CodeView
+            android:id="@+id/export_frozen_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"/>
+
+    </LinearLayout>
+
+</ScrollView>

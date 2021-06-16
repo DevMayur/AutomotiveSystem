@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:gravity="center"
+    tools:context="com.mayur.dbatufinalyear.ui.HomeFragment">
+
+    <!-- Clock and calendar-->
+    <LinearLayout
+        android:id="@+id/dateTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextClock
+            android:id="@+id/clock"
+            style="@style/TextDefault"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:format12Hour="hh:mm"
+            android:textSize="@dimen/time_size" />
+
+        <TextClock
+            android:id="@+id/date"
+            style="@style/TextDefault"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="EEE, dd MMM"
+            android:format24Hour="EEE, dd MMM"
+            android:textSize="@dimen/date_size" />
+    </LinearLayout>
+
+    <!-- Home apps-->
+    <LinearLayout
+        android:id="@+id/homeAppsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dateTimeLayout"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="32dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- This library requires pair of the VerticalSeekBar and VerticalSeekBarWrapper classes -->
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                        android:id="@+id/mySeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:splitTrack="false"
+                        app:seekBarRotation="CW270" /> <!-- Rotation: CW90 or CW270 -->
+
+                </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_image1"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/homeApp1"
+                        style="@style/TextLarge"
+                        android:layout_below="@id/iv_app_image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_1"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image2"
+                    android:layout_width="match_parent"
+                    android:tag="@string/_2"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/homeApp2"
+                        style="@style/TextLarge"
+                        android:layout_below="@id/iv_app_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_2"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                <RelativeLayout 
+                    android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image3"
+                    android:tag="@string/_3"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp3"
+                    style="@style/TextLarge"
+                    android:layout_below="@id/iv_app_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_3"
+                    android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image4"
+                    android:tag="@string/_4"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp4"
+                    style="@style/TextLarge"
+                    android:layout_below="@id/iv_app_image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_4"
+                    android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_tsdr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_car"
+                        android:tag="@string/_5" />
+
+                    <TextView
+                        android:id="@+id/homeApp5"
+                        style="@style/TextLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_5"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_app_image5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:tag="@string/_6" />
+
+                    <ImageView
+                        android:id="@+id/iv_app_image6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:tag="@string/_6" />
+
+                    <TextView
+                        android:id="@+id/homeApp6"
+                        style="@style/TextLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image7"
+                    android:tag="@string/_7"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp7"
+                    style="@style/TextLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_7"
+                    android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image8"
+                    android:tag="@string/_8"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp8"
+                    style="@style/TextLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_8"
+                    android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#cacaca"
+                android:layout_weight="1">
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="12dp"-->
+<!--                android:text="ENABLE TSDR"/>-->
+
+<!--        </LinearLayout>-->
+
+
+
+    </LinearLayout>
+
+    <!-- First run tips -->
+        <LinearLayout
+        android:id="@+id/firstRunTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/TextSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/swipe_up_for_apps" />
+
+        <TextView
+            style="@style/TextSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/long_press_for_settings" />
+
+    </LinearLayout>
+
+    <!-- Set default launcher -->
+    <TextView
+        android:id="@+id/setDefaultLauncher"
+        style="@style/TextSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/set_as_default_launcher"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/blackOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+</RelativeLayout>

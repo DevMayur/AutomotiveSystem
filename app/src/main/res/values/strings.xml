@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Traffic Sign Detection</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="gps_disabled">GPS disabled</string>
+    <string name="please_enable_gps">In order to use this app you need the GPS to be enabled.</string>
+    <string name="waiting_for_fix">Waiting for GPS fix</string>
+    <string name="step_of">Page %1$d of %2$d</string>
+    <string name="obj_detection_info">Object detection is the craft of detecting instances of a certain class, like animals, humans and many more in an image or video. \n
+The steps needed are:\n\n1. Installing the Tensorflow OD-API\n2. Gathering data\n3. Labeling data\n4. Generating TFRecords for training\n5. Configuring training\n6. Training model\n7. Exporting inference graph\n8. Testing object detector</string>
+    <string name="title_activity_system_design">ActivitySystemDesign</string>
+    <string name="tab_text_3">System Design</string>
+    <string name="tab_text_2">User Flow Diagram</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Class Diagram</string>
+
+
+    <string name="app">App</string>
+    <string name="set_as_default_launcher">Set as default launcher</string>
+    <string name="app_text_color">Text color</string>
+    <string name="double_tap_to_lock_screen">Double tap to lock</string>
+    <string name="experimental_">(experimental)</string>
+    <string name="admin_permission_message">DBATU_AUTO_SYSTEM promises to use lock screen permission responsibly.</string>
+    <string name="about">About</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="change_default_launcher">Change default launcher</string>
+    <string name="privacy">Privacy</string>
+    <string name="share">Share</string>
+    <string name="rate">Rate</string>
+    <string name="tweet">Tweet</string>
+    <string name="email">Email</string>
+    <string name="github">Github</string>
+    <string name="donate">Donate</string>
+    <string name="long_press_for_settings">Long press anywhere for settings</string>
+    <string name="swipe_up_for_apps">Swipe up for all apps</string>
+    <string name="apps_on_home_screen">Apps on home screen</string>
+    <string name="daily_wallpaper_update">Daily new wallpaper</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="center">Center</string>
+    <string name="home_layout_alignment">App alignment</string>
+    <string name="swipe_left_app">Swipe left app</string>
+    <string name="swipe_right_app">Swipe right app</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="app_drawer_tips">Tip: Swipe down to dismiss. Scroll to hide keyboard.</string>
+    <string name="okay_got_it">Okay, got it</string>
+    <string name="double_tap_lock_is_enabled_message">If double tap lock disables fingerprint or face unlock, open DBATU_AUTO_SYSTEM settings, tap on \'experimental\' and follow the instructions. Thank you.</string>
+    <string name="triple_tap_lock_message">How it works:
+        \nOnce you double-tap, screen will go dark and the phone will lock itself in 5 seconds.
+        \n\nDuring this time, you can double-tap to <b>unlock</b> or triple-tap anytime to fully lock the phone immediately.
+        \n\nNote: Turn this OFF first if you decide to delete DBATU_AUTO_SYSTEM. Thank you.</string>
+    <string name="auto_show_keyboard">Auto show keyboard</string>
+    <string name="hide">Hide</string>
+    <string name="status_bar">Show status bar</string>
+    <string name="rename">Rename</string>
+    <string name="show_date_time">Show date time</string>
+    <string name="appearance">Appearance</string>
+    <string name="gestures">Gestures</string>
+    <string name="theme_mode">Theme mode</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+    <string name="double_tap_lock_uninstall_message">Double tap to lock enabled.
+        \n\nNote: Turn this OFF first if you decide to delete DBATU_AUTO_SYSTEM.</string>
+    <string name="welcome_to_DBATU_AUTO_SYSTEM_settings">Our About page on the bottom has answers to all your questions. Don\'t forget. :)
+        \n\nThank you.</string>
+    <string name="rate_us_message">Hi, if you like DBATU_AUTO_SYSTEM, can you please rate us 5-stars?
+        \nBecause people who don\'t like DBATU_AUTO_SYSTEM, are very quick to rate us, not 5-stars. :D
+        \n\nYou won\'t see this message again. Thank you for using DBATU_AUTO_SYSTEM.</string>
+    <string name="share_message">Hi, do you think your friends would like DBATU_AUTO_SYSTEM as much as you do?
+        \n\nYou can always find the Share button at the bottom of this page. Thank you for using DBATU_AUTO_SYSTEM.</string>
+
+</resources>
