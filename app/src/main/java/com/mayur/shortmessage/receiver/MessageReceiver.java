@@ -34,7 +34,7 @@ public class MessageReceiver extends BroadcastReceiver {
 
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-		if ( intent.getAction() == Constant.SMS_RECEIVED && prefs.getBoolean("notifications_new_message", true)) {
+		if (intent.getAction().equals(Constant.SMS_RECEIVED) && prefs.getBoolean("notifications_new_message", true)) {
             abortBroadcast();
             // Parse new message
 			Bundle bundle = intent.getExtras();
