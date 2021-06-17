@@ -30,6 +30,7 @@ import com.mayur.dbatufinalyear.listener.LockTouchListener
 import com.mayur.dbatufinalyear.listener.OnSwipeTouchListener
 import com.mayur.dbatufinalyear.listener.ViewSwipeTouchListener
 import com.mayur.ui.activities.DetectorActivity
+import com.mayur.ui.activities.SplashScreenActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
@@ -165,6 +166,13 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             val intent = Intent(requireContext(), DetectorActivity::class.java)
             startActivity(intent)
         }
+
+        iv_messaging.setOnClickListener{
+            val intent = Intent(requireContext(), com.mayur.shortmessage.ActivitySplash::class.java)
+            startActivity(intent)
+        }
+
+
         setDefaultLauncher.setOnClickListener(this)
     }
 

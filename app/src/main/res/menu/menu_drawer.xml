@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_notif"
+            android:icon="@drawable/ic_notif_black"
+            android:title="Notification" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_rate_black"
+            android:title="Rate this app" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_black"
+            android:title="About" />
+    </group>
+</menu>

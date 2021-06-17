@@ -82,4 +82,20 @@ The steps needed are:\n\n1. Installing the Tensorflow OD-API\n2. Gathering data\
     <string name="share_message">Hi, do you think your friends would like DBATU_AUTO_SYSTEM as much as you do?
         \n\nYou can always find the Share button at the bottom of this page. Thank you for using DBATU_AUTO_SYSTEM.</string>
 
+    <!--exit notification-->
+    <string name="press_again_exit_app">Press again to exit</string>
+
+    <!-- Settings for Notifications Setting -->
+    <string name="activity_title_notifications">Notifications Setting</string>
+    <string name="pref_title_new_message_notifications">Notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <string name="about_text">Dbatu Final Year Project 2021</string>
+
+    <!--dont edit-->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
 </resources>

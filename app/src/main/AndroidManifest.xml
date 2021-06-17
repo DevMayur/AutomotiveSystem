@@ -17,9 +17,31 @@
         tools:ignore="QueryAllPackagesPermission" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!--For opening alarm app-->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
+
+
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.EDIT_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+
+
 
     <application
         android:name=".application.CarAssistantApplication"
@@ -88,6 +110,41 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".shortmessage.ActivitySplash"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity android:name=".shortmessage.ActivityMain"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <activity
+            android:name=".shortmessage.ActivityMessageDetails"
+            android:screenOrientation="landscape"
+            android:label="List" >
+        </activity>
+        <activity
+            android:name=".shortmessage.ActivityNewMessage"
+            android:screenOrientation="landscape"
+            android:label="New Message" >
+        </activity>
+
+        <receiver android:name=".shortmessage.receiver.MessageReceiver"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".shortmessage.ActivityNotificationSetting"
+            android:screenOrientation="landscape"
+            android:label="@string/activity_title_notifications" >
+        </activity>
+
+
 
         <receiver
             android:name=".dbatufinalyear.listener.DeviceAdmin"
