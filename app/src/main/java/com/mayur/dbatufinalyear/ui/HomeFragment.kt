@@ -230,21 +230,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         }
 
 
+        iv_settings.setOnClickListener{
+            try {
+                findNavController().navigate(R.id.action_mainFragment_to_settingsFragment)
+                viewModel.firstOpen(false)
+            } catch (e: java.lang.Exception) {
+            }
+        }
+
         setDefaultLauncher.setOnClickListener(this)
     }
 
     private fun setHomeAlignment(gravity: Int) {
-//        dateTimeLayout.gravity = gravity
-//        homeAppsLayout.gravity = gravity
-//        setDefaultLauncher.gravity = gravity
-//        homeApp1.gravity = gravity
-//        homeApp2.gravity = gravity
-//        homeApp3.gravity = gravity
-//        homeApp4.gravity = gravity
-//        homeApp5.gravity = gravity
-//        homeApp6.gravity = gravity
-//        homeApp7.gravity = gravity
-//        homeApp8.gravity = gravity
+
     }
 
     private fun populateHomeApps(appCountUpdated: Boolean) {

@@ -64,7 +64,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/appearance"
-                android:textColor="@color/colorPrimary" />
+                 />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -81,7 +81,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/apps_on_home_screen"
-                    android:textColor="@color/colorPrimary"  />
+                      />
 
                 <TextView
                     android:id="@+id/homeAppsNum"
@@ -214,7 +214,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/auto_show_keyboard"
-                    android:textColor="@color/colorPrimary" />
+                     />
 
                 <TextView
                     android:id="@+id/autoShowKeyboard"
@@ -268,7 +268,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/status_bar"
-                    android:textColor="@color/colorPrimary"  />
+                      />
 
                 <TextView
                     android:id="@+id/statusBar"
@@ -295,7 +295,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/show_date_time"
-                    android:textColor="@color/colorPrimary"  />
+                      />
 
                 <TextView
                     android:id="@+id/dateTime"
@@ -322,7 +322,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/home_layout_alignment"
-                    android:textColor="@color/colorPrimary" />
+                     />
 
                 <TextView
                     android:id="@+id/alignment"
@@ -406,7 +406,7 @@
                     android:layout_marginStart="24dp"
                     android:paddingVertical="8dp"
                     android:text="@string/theme_mode"
-                    android:textColor="@color/colorPrimary"  />
+                      />
 
                 <TextView
                     android:id="@+id/themeColor"
@@ -471,8 +471,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
-                android:text="@string/gestures"
-                android:textColor="?attr/primaryColor" />
+                android:text="@string/gestures"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -489,8 +488,7 @@
                     android:layout_weight="1"
                     android:lines="1"
                     android:paddingVertical="8dp"
-                    android:text="@string/swipe_left_app"
-                    android:textColor="?attr/primaryColor" />
+                    android:text="@string/swipe_left_app"/>
 
                 <TextView
                     android:id="@+id/swipeLeftApp"
@@ -519,8 +517,7 @@
                     android:layout_weight="1"
                     android:lines="1"
                     android:paddingVertical="8dp"
-                    android:text="@string/swipe_right_app"
-                    android:textColor="?attr/primaryColor" />
+                    android:text="@string/swipe_right_app"/>
 
                 <TextView
                     android:id="@+id/swipeRightApp"
@@ -553,8 +550,7 @@
                         style="@style/TextMedium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/double_tap_to_lock_screen"
-                        android:textColor="?attr/primaryColor" />
+                        android:text="@string/double_tap_to_lock_screen" />
 
                     <TextView
                         android:id="@+id/experimental"
@@ -580,75 +576,5 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="40dp"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp">
-
-        <TextView
-            android:id="@+id/about"
-            style="@style/TextSmallLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:padding="8dp"
-            android:text="@string/about" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/share"
-            style="@style/TextSmallLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="@string/share" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/rate"
-            style="@style/TextSmallLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="@string/rate" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/tweet"
-            style="@style/TextSmallLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="@string/tweet" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/privacy"
-            style="@style/TextSmallLight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="@string/privacy" />
-
-    </LinearLayout>
 
 </LinearLayout>

@@ -131,6 +131,80 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_tsdr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_car"
+                        android:tag="@string/_5" />
+
+                    <TextView
+                        android:id="@+id/homeApp5"
+                        style="@style/TextLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_5"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_app_image5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_messaging"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_message_24"
+                        android:tag="@string/_6" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_app_image6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/homeApp6"
+                        style="@style/TextLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_weight="1">
@@ -193,7 +267,7 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
 
-                <RelativeLayout 
+                <RelativeLayout
                     android:layout_weight="1"
                     android:layout_width="70dp"
                     android:layout_height="70dp">
@@ -222,12 +296,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp">
 
-                <ImageView
-                    android:id="@+id/iv_app_image4"
-                    android:tag="@string/_4"
-                    android:src="@drawable/ic_baseline_add_box_24"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    <ImageView
+                        android:id="@+id/iv_app_image4"
+                        android:tag="@string/_4"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_settings"
+                        android:tag="@string/_4"
+                        android:src="@drawable/ic_baseline_settings_applications_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
 
                 <TextView
                     android:id="@+id/homeApp4"
@@ -239,80 +322,6 @@
                     android:paddingVertical="@dimen/home_app_padding_vertical"
                     android:tag="@string/_4"
                     android:visibility="gone" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/iv_tsdr"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_car"
-                        android:tag="@string/_5" />
-
-                    <TextView
-                        android:id="@+id/homeApp5"
-                        style="@style/TextLarge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/app"
-                        android:paddingVertical="@dimen/home_app_padding_vertical"
-                        android:tag="@string/_5"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/iv_app_image5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_baseline_add_box_24"
-                        android:tag="@string/_6" />
-
-                    <ImageView
-                        android:id="@+id/iv_messaging"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/ic_baseline_message_24"
-                        android:tag="@string/_6" />
-
-
-                    <ImageView
-                        android:id="@+id/iv_app_image6"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:visibility="gone"
-                        android:src="@drawable/ic_baseline_add_box_24"
-                        android:tag="@string/_6" />
-
-                    <TextView
-                        android:id="@+id/homeApp6"
-                        style="@style/TextLarge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/app"
-                        android:paddingVertical="@dimen/home_app_padding_vertical"
-                        android:tag="@string/_6"
-                        android:visibility="gone" />
 
                 </RelativeLayout>
 

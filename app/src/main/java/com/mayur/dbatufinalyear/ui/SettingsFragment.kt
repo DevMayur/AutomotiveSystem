@@ -104,12 +104,6 @@ class SettingsFragment : Fragment(), View.OnClickListener, View.OnLongClickListe
 
             R.id.swipeLeftApp -> showAppListIfEnabled(Constants.FLAG_SET_SWIPE_LEFT_APP)
             R.id.swipeRightApp -> showAppListIfEnabled(Constants.FLAG_SET_SWIPE_RIGHT_APP)
-
-            R.id.about -> openUrl(Constants.URL_ABOUT_OLAUNCHER)
-            R.id.share -> shareApp()
-            R.id.rate -> rateApp()
-            R.id.tweet -> openUrl(Constants.URL_TWITTER_TANUJ)
-            R.id.privacy -> openUrl(Constants.URL_OLAUNCHER_PRIVACY)
         }
     }
 
@@ -150,11 +144,6 @@ class SettingsFragment : Fragment(), View.OnClickListener, View.OnLongClickListe
         themeLight.setOnClickListener(this)
         themeDark.setOnClickListener(this)
 
-        about.setOnClickListener(this)
-        share.setOnClickListener(this)
-        rate.setOnClickListener(this)
-        tweet.setOnClickListener(this)
-        privacy.setOnClickListener(this)
 
         maxApps0.setOnClickListener(this)
         maxApps1.setOnClickListener(this)
@@ -471,11 +460,9 @@ class SettingsFragment : Fragment(), View.OnClickListener, View.OnLongClickListe
         when (prefs.toShowHintCounter) {
             Constants.HINT_RATE_US -> {
                 viewModel.showMessageDialog(getString(R.string.rate_us_message))
-                rate.setCompoundDrawablesWithIntrinsicBounds(0, android.R.drawable.arrow_down_float, 0, 0)
             }
             Constants.HINT_SHARE -> {
                 viewModel.showMessageDialog(getString(R.string.share_message))
-                share.setCompoundDrawablesWithIntrinsicBounds(0, android.R.drawable.arrow_down_float, 0, 0)
             }
         }
     }
