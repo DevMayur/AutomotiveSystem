@@ -18,6 +18,8 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.WindowManager
 import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
+import android.widget.Toast.LENGTH_SHORT
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import app.dbatufinalyear.data.AppModel
@@ -300,22 +302,12 @@ fun getBackupWallpaper(wallType: String): String {
     else Constants.URL_DEFAULT_DARK_WALLPAPER
 }
 
-fun openDialerApp(context: Context) {
-    try {
-        val sendIntent = Intent(Intent.ACTION_DIAL)
-        context.startActivity(sendIntent)
-    } catch (e: java.lang.Exception) {
-
-    }
+fun rightSwipedOnHome(context: Context) {
+    Toast.makeText(context, " Right Swipe ", LENGTH_SHORT).show()
 }
 
-fun openCameraApp(context: Context) {
-    try {
-        val sendIntent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
-        context.startActivity(sendIntent)
-    } catch (e: java.lang.Exception) {
-
-    }
+fun leftSwipedOnHome(context: Context) {
+    Toast.makeText(context, " Left Swipe ", LENGTH_SHORT).show()
 }
 
 fun openAlarmApp(context: Context) {

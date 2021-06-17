@@ -1,9 +1,11 @@
 package com.mayur.dbatufinalyear.ui
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
@@ -15,12 +17,17 @@ import android.view.ViewGroup
 import android.view.WindowInsets
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.app.ActivityCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import app.dbatufinalyear.data.AppModel
+import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.mayur.R
 import com.mayur.dbatufinalyear.MainViewModel
 import com.mayur.dbatufinalyear.data.Constants
@@ -30,11 +37,12 @@ import com.mayur.dbatufinalyear.listener.LockTouchListener
 import com.mayur.dbatufinalyear.listener.OnSwipeTouchListener
 import com.mayur.dbatufinalyear.listener.ViewSwipeTouchListener
 import com.mayur.ui.activities.DetectorActivity
-import com.mayur.ui.activities.SplashScreenActivity
 import kotlinx.android.synthetic.main.fragment_home.*
+
 
 class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener {
 
+    private lateinit var googleMap: GoogleMap
     private val LOCK_SCREEN_TIMEOUT = 5000 // 5 seconds
 
     private lateinit var prefs: Prefs
@@ -42,7 +50,56 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
     private lateinit var deviceManager: DevicePolicyManager
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
+        var mMapView = rootView.findViewById<View>(R.id.mapView) as MapView
+        mMapView.onCreate(savedInstanceState)
+
+        mMapView.onResume() // needed to get the map to display immediately
+
+
+        try {
+            MapsInitializer.initialize(requireActivity().applicationContext)
+        } catch (e: java.lang.Exception) {
+            e.printStackTrace()
+        }
+
+
+
+        mMapView.getMapAsync(object : OnMapReadyCallback{
+            override fun onMapReady(mMap: GoogleMap) {
+                googleMap = mMap
+
+                // For showing a move to my location button
+                if (ActivityCompat.checkSelfPermission(
+                        requireContext(),
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        requireContext(),
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+
+                    return
+                }
+                googleMap.setMyLocationEnabled(true)
+                val myLocation = googleMap.myLocation
+
+                // For dropping a marker at a point on the Map
+                val YOURLOCATION = LatLng(myLocation.latitude, myLocation.longitude)
+                googleMap.addMarker(
+                    MarkerOptions().position(YOURLOCATION).title("Marker Title")
+                        .snippet("Marker Description")
+                )
+
+                // For zooming automatically to the location of the marker   Builder.target(sydney).zoom(12).build()
+                val cameraPosition: CameraPosition = CameraPosition.Builder().target(YOURLOCATION).zoom(8f).build()
+                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+            }
+        })
+
+
+        return rootView;
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -347,14 +404,14 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         if (!prefs.swipeRightEnabled) return
         if (prefs.appPackageSwipeRight.isNotEmpty())
             launchApp(prefs.appNameSwipeRight, prefs.appPackageSwipeRight, android.os.Process.myUserHandle().toString())
-        else openDialerApp(requireContext())
+        else rightSwipedOnHome(requireContext())
     }
 
     private fun openSwipeLeftApp() {
         if (!prefs.swipeLeftEnabled) return
         if (prefs.appPackageSwipeLeft.isNotEmpty())
             launchApp(prefs.appNameSwipeLeft, prefs.appPackageSwipeLeft, android.os.Process.myUserHandle().toString())
-        else openCameraApp(requireContext())
+        else leftSwipedOnHome(requireContext())
     }
 
     private fun lockPhone() {

@@ -9,35 +9,80 @@
     android:gravity="center"
     tools:context="com.mayur.dbatufinalyear.ui.HomeFragment">
 
+
+    <LinearLayout
+        android:id="@+id/ll_branding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/dateTimeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="#cacaca" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_map"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#cacaca"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="3">
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
     <!-- Clock and calendar-->
     <LinearLayout
         android:id="@+id/dateTimeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_toEndOf="@id/ll_branding"
+        android:layout_toStartOf="@+id/ll_map"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="visible">
 
         <TextClock
             android:id="@+id/clock"
             style="@style/TextDefault"
-            android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:format12Hour="hh:mm"
+            android:gravity="center"
             android:textSize="@dimen/time_size" />
 
         <TextClock
             android:id="@+id/date"
             style="@style/TextDefault"
-            android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:format12Hour="EEE, dd MMM"
             android:format24Hour="EEE, dd MMM"
+            android:gravity="center"
             android:textSize="@dimen/date_size" />
     </LinearLayout>
 
@@ -46,9 +91,11 @@
         android:id="@+id/homeAppsLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/ll_map"
+        android:layout_margin="12dp"
         android:layout_below="@id/dateTimeLayout"
         android:layout_gravity="center_vertical"
-        android:layout_margin="32dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -201,6 +248,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -323,20 +371,6 @@
                     android:visibility="gone" />
 
                 </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="#cacaca"
-                android:layout_weight="1">
-
-
-
-
 
             </LinearLayout>
 
