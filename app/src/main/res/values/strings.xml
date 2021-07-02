@@ -97,5 +97,8 @@ The steps needed are:\n\n1. Installing the Tensorflow OD-API\n2. Gathering data\
     <!--dont edit-->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="document_title_here">document title goes here...</string>
+    <string name="upload">Upload</string>
 
 </resources>

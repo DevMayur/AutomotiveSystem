@@ -47,6 +47,7 @@
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapView"
+            android:layout_marginEnd="?attr/actionBarSize"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -215,9 +216,17 @@
                     android:layout_height="70dp">
 
                     <ImageView
+                        android:id="@+id/iv_doc_vault"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        android:src="@drawable/ic_baseline_document_scanner_24"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
                         android:id="@+id/iv_app_image1"
                         android:layout_width="match_parent"
                         android:tag="@string/_1"
+                        android:visibility="gone"
                         android:src="@drawable/ic_baseline_add_box_24"
                         android:layout_height="match_parent"/>
 

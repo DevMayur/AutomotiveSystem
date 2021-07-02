@@ -36,6 +36,7 @@ import com.mayur.dbatufinalyear.helper.*
 import com.mayur.dbatufinalyear.listener.LockTouchListener
 import com.mayur.dbatufinalyear.listener.OnSwipeTouchListener
 import com.mayur.dbatufinalyear.listener.ViewSwipeTouchListener
+import com.mayur.document_vault.DocumentVaultActivity
 import com.mayur.ui.activities.DetectorActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -83,18 +84,20 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
                     return
                 }
                 googleMap.setMyLocationEnabled(true)
+//                TODO::CHANGE LOCATION GETTER METHOD
                 val myLocation = googleMap.myLocation
-
                 // For dropping a marker at a point on the Map
-                val YOURLOCATION = LatLng(myLocation.latitude, myLocation.longitude)
-                googleMap.addMarker(
-                    MarkerOptions().position(YOURLOCATION).title("Marker Title")
-                        .snippet("Marker Description")
-                )
-
-                // For zooming automatically to the location of the marker   Builder.target(sydney).zoom(12).build()
-                val cameraPosition: CameraPosition = CameraPosition.Builder().target(YOURLOCATION).zoom(8f).build()
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+                if (myLocation != null) {
+                    val YOURLOCATION = LatLng(myLocation.latitude, myLocation.longitude)
+                    googleMap.addMarker(
+                        MarkerOptions().position(YOURLOCATION).title("Marker Title")
+                            .snippet("Marker Description")
+                    )
+                    // For zooming automatically to the location of the marker   Builder.target(sydney).zoom(12).build()
+                    val cameraPosition: CameraPosition =
+                        CameraPosition.Builder().target(YOURLOCATION).zoom(8f).build()
+                    googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
+                }
             }
         })
 
@@ -226,6 +229,12 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
 
         iv_messaging.setOnClickListener{
             val intent = Intent(requireContext(), com.mayur.shortmessage.ActivitySplash::class.java)
+            startActivity(intent)
+        }
+
+
+        iv_doc_vault.setOnClickListener{
+            val intent = Intent(requireContext(), DocumentVaultActivity::class.java)
             startActivity(intent)
         }
 

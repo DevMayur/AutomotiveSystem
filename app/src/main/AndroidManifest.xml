@@ -15,17 +15,15 @@
 
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--For opening alarm app-->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- For opening alarm app -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-
-
-
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -33,7 +31,8 @@
     <uses-permission android:name="android.permission.EDIT_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -41,7 +40,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-
 
     <application
         android:name=".application.CarAssistantApplication"
@@ -51,6 +49,14 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".document_vault.DocumentViewer"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".document_vault.DocumentUploaderActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".document_vault.DocumentVaultActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.activities.ActivitySystemDesign"
             android:label="@string/title_activity_system_design"
@@ -60,21 +66,21 @@
         <activity android:name=".ui.activities.ArticleActivity" />
         <activity android:name=".ui.activities.ActivityStepper" />
         <activity android:name=".ui.activities.ActivityAbout" />
-
         <activity android:name=".ui.activities.ActivityHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.activities.DetectorActivity"
-            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ui.activities.DetectorActivity"
+            android:screenOrientation="landscape" />
         <activity android:name=".ui.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
 
@@ -87,68 +93,59 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCoXufcROmM50oBo8ANUxihtrcJh2Fi7tU" />
 
-
         <activity
             android:name=".dbatufinalyear.MainActivity"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:taskAffinity=""
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".dbatufinalyear.helper.FakeHomeActivity"
             android:enabled="false"
-            android:screenOrientation="landscape"
             android:launchMode="singleTask"
+            android:screenOrientation="landscape"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".shortmessage.ActivitySplash"
-            android:screenOrientation="landscape">
-        </activity>
-
-        <activity android:name=".shortmessage.ActivityMain"
-            android:screenOrientation="landscape">
-        </activity>
-
+        <activity
+            android:name=".shortmessage.ActivitySplash"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".shortmessage.ActivityMain"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".shortmessage.ActivityMessageDetails"
-            android:screenOrientation="landscape"
-            android:label="List" >
-        </activity>
+            android:label="List"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".shortmessage.ActivityNewMessage"
-            android:screenOrientation="landscape"
-            android:label="New Message" >
-        </activity>
+            android:label="New Message"
+            android:screenOrientation="landscape" />
 
-        <receiver android:name=".shortmessage.receiver.MessageReceiver"
+        <receiver
+            android:name=".shortmessage.receiver.MessageReceiver"
             android:permission="android.permission.BROADCAST_SMS">
-            <intent-filter android:priority="1000" >
+            <intent-filter android:priority="1000">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
         <activity
             android:name=".shortmessage.ActivityNotificationSetting"
-            android:screenOrientation="landscape"
-            android:label="@string/activity_title_notifications" >
-        </activity>
-
-
+            android:label="@string/activity_title_notifications"
+            android:screenOrientation="landscape" />
 
         <receiver
             android:name=".dbatufinalyear.listener.DeviceAdmin"
@@ -156,13 +153,11 @@
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/policies" />
+
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
-
     </application>
-
-
 
 </manifest>

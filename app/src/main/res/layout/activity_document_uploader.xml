@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".document_vault.DocumentUploaderActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="@string/upload_document"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_doc_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:hint="@string/document_title_here"
+        android:textColorHint="@color/grey_text"
+        android:layout_margin="16dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/bt_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"/>
+
+
+
+</LinearLayout>
