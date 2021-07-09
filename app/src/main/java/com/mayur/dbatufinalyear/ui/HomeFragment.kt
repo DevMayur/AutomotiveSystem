@@ -3,10 +3,12 @@ package com.mayur.dbatufinalyear.ui
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.admin.DevicePolicyManager
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -236,6 +238,19 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
         iv_doc_vault.setOnClickListener{
             val intent = Intent(requireContext(), DocumentVaultActivity::class.java)
             startActivity(intent)
+        }
+
+        iv_youtube.setOnClickListener{
+            val appIntent = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube"))
+            val webIntent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com")
+            )
+            try {
+                requireContext().startActivity(appIntent)
+            } catch (ex: ActivityNotFoundException) {
+                requireContext().startActivity(webIntent)
+            }
         }
 
 

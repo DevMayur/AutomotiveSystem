@@ -251,8 +251,16 @@
                     android:id="@+id/iv_app_image2"
                     android:layout_width="match_parent"
                     android:tag="@string/_2"
+                    android:visibility="gone"
                     android:src="@drawable/ic_baseline_add_box_24"
                     android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_youtube"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_2"
+                        android:src="@drawable/ic_baseline_ondemand_video_24"
+                        android:layout_height="match_parent"/>
 
                     <TextView
                         android:id="@+id/homeApp2"
