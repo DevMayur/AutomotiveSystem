@@ -5,13 +5,6 @@ Information Technology
 Final Year Project Phase 2
 
 
-title: Automotive OS
-created at: Fri Jul 09 2021 04:53:13 GMT+0000 (Coordinated Universal Time)
-updated at: Sat Jul 10 2021 08:12:04 GMT+0000 (Coordinated Universal Time)
----
-
-# Automotive OS
-
 📝 Overview
 
 Automotive System built using java and kotlin
