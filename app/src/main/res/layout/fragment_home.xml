@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:gravity="center"
+    android:background="@color/light_blue_50"
     tools:context="com.mayur.dbatufinalyear.ui.HomeFragment">
 
 
@@ -36,11 +37,10 @@
 
     <LinearLayout
         android:id="@+id/ll_map"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#cacaca"
         android:layout_alignParentEnd="true"
         android:layout_weight="3">
 
@@ -177,6 +177,7 @@
                         android:id="@+id/iv_messaging"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        app:tint="@color/green_700"
                         android:src="@drawable/ic_baseline_message_24"
                         android:tag="@string/_6" />
 
@@ -259,6 +260,7 @@
                         android:id="@+id/iv_youtube"
                         android:layout_width="match_parent"
                         android:tag="@string/_2"
+                        app:tint="@color/purple_700"
                         android:src="@drawable/ic_baseline_ondemand_video_24"
                         android:layout_height="match_parent"/>
 
@@ -289,9 +291,18 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp">
 
+                    <ImageView
+                        android:id="@+id/iv_assistant"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        app:tint="@color/red_500"
+                        android:src="@drawable/ic_baseline_keyboard_voice_24"
+                        android:layout_height="match_parent"/>
+
                 <ImageView
                     android:id="@+id/iv_app_image3"
                     android:tag="@string/_3"
+                    android:visibility="gone"
                     android:src="@drawable/ic_baseline_add_box_24"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -325,6 +336,7 @@
                     <ImageView
                         android:id="@+id/iv_settings"
                         android:tag="@string/_4"
+                        app:tint="@color/grey_800"
                         android:src="@drawable/ic_baseline_settings_applications_24"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>

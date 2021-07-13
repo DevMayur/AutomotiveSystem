@@ -262,6 +262,11 @@ class HomeFragment : Fragment(), View.OnClickListener, View.OnLongClickListener 
             }
         }
 
+
+        iv_assistant.setOnClickListener{
+            startActivity(Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        }
+
         setDefaultLauncher.setOnClickListener(this)
     }
 
