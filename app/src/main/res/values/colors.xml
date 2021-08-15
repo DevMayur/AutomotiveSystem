@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#98999b</color>
-    <color name="colorPrimaryDark">#404041</color>
-    <color name="colorAccent">#d2d0d1</color>
+<!--    <color name="colorPrimary">#98999b</color>-->
+<!--    <color name="colorPrimaryDark">#404041</color>-->
+<!--    <color name="colorAccent">#d2d0d1</color>-->
     <color name="orange">#EC7800</color>
     <color name="semi_transparent">#66000000</color>
 
@@ -16,16 +16,12 @@
     <color name="grey_90">#263238</color>
     <color name="grey_60">#666666</color>
 
-
     <color name="transparent">#00FFFFFF</color>
     <color name="grey_10">#e6e6e6</color>
     <color name="grey_40">#999999</color>
     <color name="grey_3">#f7f7f7</color>
     <color name="grey_5">#f2f2f2</color>
     <color name="grey_80">#37474F</color>
-
-
-
 
     <color name="overlay_dark_10">#1A000000</color>
     <color name="overlay_dark_20">#33000000</color>
@@ -377,5 +373,31 @@
     <color name="blackInverseTrans50">#80FFFFFF</color>
     <color name="blackInverseTrans80">#CCFFFFFF</color>
     <color name="blackInverseTrans90">#E6FFFFFF</color>
+
+
+
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorPrimaryLight">#90CAF9</color>
+
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorAccentDark">#E64A19</color>
+    <color name="colorAccentLight">#80D8FF</color>
+    <color name="textColorSecondary">@color/grey_hard</color>
+
+    <color name="backGroundPrimary">@color/background_material_light</color>
+
+    <color name="dialogContentColor">#767676</color>
+
+    <color name="cardFeaturedContent">#E0E0E0</color>
+
+    <color name="notif_color">#F58634</color>
+
+    <color name="grey_hard">#96989A</color>
+    <color name="grey_medium">#BDBFC1</color>
+    <color name="grey_soft">#F5F5F5</color>
+
+    <color name="grey_bg">#EBEFF0</color>
+    <color name="grey_text">#222D31</color>
 
 </resources>

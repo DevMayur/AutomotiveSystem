@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_call"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_call"
+        android:title="action call"/>
+
+	<item
+        android:id="@+id/action_add_contact"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="add contact"/>
+</menu>

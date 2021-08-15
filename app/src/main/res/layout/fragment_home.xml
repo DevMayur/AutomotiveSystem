@@ -7,37 +7,83 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:gravity="center"
+    android:background="@color/black"
     tools:context="com.mayur.dbatufinalyear.ui.HomeFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_branding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/dateTimeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="#cacaca" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_map"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="3">
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_marginEnd="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
     <!-- Clock and calendar-->
     <LinearLayout
         android:id="@+id/dateTimeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_toEndOf="@id/ll_branding"
+        android:layout_toStartOf="@+id/ll_map"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="visible">
 
         <TextClock
             android:id="@+id/clock"
             style="@style/TextDefault"
-            android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:format12Hour="hh:mm"
+            android:gravity="center"
             android:textSize="@dimen/time_size" />
 
         <TextClock
             android:id="@+id/date"
             style="@style/TextDefault"
-            android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:format12Hour="EEE, dd MMM"
             android:format24Hour="EEE, dd MMM"
+            android:gravity="center"
             android:textSize="@dimen/date_size" />
     </LinearLayout>
 
@@ -46,9 +92,11 @@
         android:id="@+id/homeAppsLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/ll_map"
+        android:layout_margin="12dp"
         android:layout_below="@id/dateTimeLayout"
         android:layout_gravity="center_vertical"
-        android:layout_margin="32dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -84,123 +132,8 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <RelativeLayout
-                    android:layout_weight="1"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp">
-
-                    <ImageView
-                        android:id="@+id/iv_app_image1"
-                        android:layout_width="match_parent"
-                        android:tag="@string/_1"
-                        android:src="@drawable/ic_baseline_add_box_24"
-                        android:layout_height="match_parent"/>
-
-                    <TextView
-                        android:id="@+id/homeApp1"
-                        style="@style/TextLarge"
-                        android:layout_below="@id/iv_app_image1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/app"
-                        android:paddingVertical="@dimen/home_app_padding_vertical"
-                        android:tag="@string/_1"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
-
-                <RelativeLayout android:layout_weight="1"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp">
-
-                <ImageView
-                    android:id="@+id/iv_app_image2"
-                    android:layout_width="match_parent"
-                    android:tag="@string/_2"
-                    android:src="@drawable/ic_baseline_add_box_24"
-                    android:layout_height="match_parent"/>
-
-                    <TextView
-                        android:id="@+id/homeApp2"
-                        style="@style/TextLarge"
-                        android:layout_below="@id/iv_app_image2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/app"
-                        android:paddingVertical="@dimen/home_app_padding_vertical"
-                        android:tag="@string/_2"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                <RelativeLayout 
-                    android:layout_weight="1"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp">
-
-                <ImageView
-                    android:id="@+id/iv_app_image3"
-                    android:tag="@string/_3"
-                    android:src="@drawable/ic_baseline_add_box_24"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-                <TextView
-                    android:id="@+id/homeApp3"
-                    style="@style/TextLarge"
-                    android:layout_below="@id/iv_app_image3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/app"
-                    android:paddingVertical="@dimen/home_app_padding_vertical"
-                    android:tag="@string/_3"
-                    android:visibility="gone" />
-
-                </RelativeLayout>
-
-                <RelativeLayout android:layout_weight="1"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp">
-
-                <ImageView
-                    android:id="@+id/iv_app_image4"
-                    android:tag="@string/_4"
-                    android:src="@drawable/ic_baseline_add_box_24"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-                <TextView
-                    android:id="@+id/homeApp4"
-                    style="@style/TextLarge"
-                    android:layout_below="@id/iv_app_image4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/app"
-                    android:paddingVertical="@dimen/home_app_padding_vertical"
-                    android:tag="@string/_4"
-                    android:visibility="gone" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -237,14 +170,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_add_box_24"
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_messaging"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:tint="@color/green_700"
+                        android:src="@drawable/ic_baseline_message_24"
                         android:tag="@string/_6" />
+
 
                     <ImageView
                         android:id="@+id/iv_app_image6"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_add_box_24"
-                        android:tag="@string/_6" />
+                        android:tag="@string/_6"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/homeApp6"
@@ -255,6 +199,158 @@
                         android:paddingVertical="@dimen/home_app_padding_vertical"
                         android:tag="@string/_6"
                         android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:id="@+id/iv_doc_vault"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        android:src="@drawable/ic_baseline_document_scanner_24"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_app_image1"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/homeApp1"
+                        style="@style/TextLarge"
+                        android:layout_below="@id/iv_app_image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_1"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_image2"
+                    android:layout_width="match_parent"
+                    android:tag="@string/_2"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/iv_youtube"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_2"
+                        app:tint="@color/purple_700"
+                        android:src="@drawable/ic_baseline_ondemand_video_24"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/homeApp2"
+                        style="@style/TextLarge"
+                        android:layout_below="@id/iv_app_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/app"
+                        android:paddingVertical="@dimen/home_app_padding_vertical"
+                        android:tag="@string/_2"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:id="@+id/iv_assistant"
+                        android:layout_width="match_parent"
+                        android:tag="@string/_1"
+                        app:tint="@color/red_500"
+                        android:src="@drawable/ic_baseline_keyboard_voice_24"
+                        android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_app_image3"
+                    android:tag="@string/_3"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp3"
+                    style="@style/TextLarge"
+                    android:layout_below="@id/iv_app_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_3"
+                    android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_weight="1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:id="@+id/iv_app_image4"
+                        android:tag="@string/_4"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_baseline_add_box_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                    <ImageView
+                        android:id="@+id/iv_settings"
+                        android:tag="@string/_4"
+                        app:tint="@color/grey_800"
+                        android:src="@drawable/ic_baseline_settings_applications_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/homeApp4"
+                    style="@style/TextLarge"
+                    android:layout_below="@id/iv_app_image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app"
+                    android:paddingVertical="@dimen/home_app_padding_vertical"
+                    android:tag="@string/_4"
+                    android:visibility="gone" />
 
                 </RelativeLayout>
 
@@ -313,20 +409,6 @@
                     android:visibility="gone" />
 
                 </RelativeLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="#cacaca"
-                android:layout_weight="1">
-
-
-
-
 
             </LinearLayout>
 
